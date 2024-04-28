@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+span, a {
+    display: inline-block;
+}
+@mixin a($w,$bgc,$x,$c,$size){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: $w;
+    height: $w;
+    font-weight: bold;
+    background-color: $bgc;
+    border: 20px solid $x;
+    color: $c;
+    font-size: $size;
+    transition: 0.2s all linear;
+    &:hover{
+         rotate: 10deg;
+           border-radius: 15px;
+          scale: 0.9;
+          color: white;
+    }
+}
+.box{
+    display: flex;
+    justify-content: center;
+     margin:100px auto ;
+    column-gap: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.raund1{
+    @include a(200px,yellow,green, green,20px);
+}
+.raund2{
+    @include a(300px,yellow, rgb(73, 11, 81),rgb(73, 11, 81),40px);
+}
+.raund3{
+@include a(400px,yellow,red,blue,60px);
+}
+
